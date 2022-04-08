@@ -16,7 +16,7 @@ export default function TextForm(props) {
         // console.log("uppercase was clicked");
         var text3 = text.toUpperCase();
         setText(text3);
-        {props.showAlert("uppercase clicked","primary")};
+        {props.showAlert("uppercase clicked...Thank you","primary")};
     }
   
     const handleLowerClick = () => {
