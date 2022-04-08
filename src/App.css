@@ -1,0 +1,15 @@
+#otp{
+    opacity:0.3;
+}
+
+.flb{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    
+}
+.fbi{
+    flex-grow: 1.95;
+  
+}
