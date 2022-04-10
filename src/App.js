@@ -1,5 +1,5 @@
 import { render } from "react-dom";
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import About from './components/About';
 import Navbar from './components/Navbar';
@@ -41,15 +41,16 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <Router>
         <Navbar title="text-utility" mode={mode} changeMode={changeMode} btnText={buttonText} />
         <Alert alert={alert} />
-      {/* switch is repaced by routes */}
+        {/* switch is repaced by routes */}
         <Routes>
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/" element={<TextForm  heading="Enter your Text Below" mode={mode} showAlert={showAlert}/>} />
+          <Route exact path="/about" element={<About  mode={mode} changeMode={changeMode}/>} />
+          <Route exact path="/" element={<TextForm heading="Enter your Text Below" mode={mode} showAlert={showAlert} />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
+
     </>
 
   )

@@ -85,12 +85,12 @@ export default function TextForm(props) {
                     <textarea className="form-control" id="textArea" onChange={handleOnChange} rows="6" value={text}   style={{backgroundColor:props.mode==='light'?'white':'grey',color:props.mode==='dark'?'white':'black'}}  />  
                 </div>
                 <div className='flb'>
-                <button className='btn btn-primary mx-2  '  id="uclk" onClick={handleUpperClick} >Convert to uppercase</button>
-                <button className='btn btn-secondary mx-2  ' id="uclk2" onClick={handleLowerClick} >Convert to Lowercase</button>
-                <button className='btn btn-success mx-2  ' id="uclk4" onClick={handleTrim} >Remove First and Last Space</button>
-                <button className='btn btn-danger  mx-2  fbi '   id="uclk3" onClick={handleClear} >Clear</button>
-                <button className='btn btn-dark mx-2 fbi  ' id="uclk6" onClick={handleRemoveSpace} >Remove spaces</button>
-                <button className='btn btn-warning mx-2  fbi ' id="uclk5" onClick={handleCopy} >Copy </button>
+                <button className='btn btn-primary mx-2' disabled={text.length===0}  id="uclk" onClick={handleUpperClick} >Convert to uppercase</button>
+                <button className='btn btn-secondary mx-2  ' disabled={text.length===0}  id="uclk2" onClick={handleLowerClick} >Convert to Lowercase</button>
+                <button className='btn btn-success mx-2  '  disabled={text.length===0}  id="uclk4" onClick={handleTrim} >Remove First and Last Space</button>
+                <button className='btn btn-danger  mx-2  fbi ' disabled={text.length===0}    id="uclk3" onClick={handleClear} >Clear</button>
+                <button className='btn btn-dark mx-2 fbi  ' disabled={text.length===0}  id="uclk6" onClick={handleRemoveSpace} >Remove spaces</button>
+                <button className='btn btn-warning mx-2  fbi ' disabled={text.length===0}  id="uclk5" onClick={handleCopy} >Copy </button>
                 </div>
             </div>
             <div className='container'>
